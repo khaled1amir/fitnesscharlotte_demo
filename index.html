@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Fitness Factory of Charlotte | 24/7 Heavy Iron Gym</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#e53935',
+              hover: '#c62828',
+              dark: '#0a0a0c',
+              card: '#141418',
+              border: '#26262e'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #0a0a0c;
+      color: #e4e4e7;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+    .grid-pattern {
+      background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-brand-red selection:text-white">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-brand-red text-white text-xs font-semibold py-2 px-4 text-center tracking-wider uppercase flex items-center justify-center gap-2">
+    <span class="inline-block w-2 h-2 rounded-full bg-white animate-ping"></span>
+    OPEN 24/7/365 FOR MEMBERS | STAFFED TODAY: 9:00 AM – 9:00 PM
+  </div>
+
+  <!-- Navigation -->
+  <header class="sticky top-0 z-50 bg-brand-dark/90 backdrop-blur-md border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 bg-brand-red text-white flex items-center justify-center font-black text-xl rounded group-hover:bg-brand-hover transition">
+          FF
+        </div>
+        <div class="flex flex-col">
+          <span class="font-black text-xl tracking-wider text-white uppercase leading-none">THE FITNESS FACTORY</span>
+          <span class="text-xs text-zinc-400 tracking-widest uppercase mt-0.5">CHARLOTTE, NC</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-300">
+        <a href="#about" class="hover:text-brand-red transition">About Us</a>
+        <a href="#equipment" class="hover:text-brand-red transition">Equipment</a>
+        <a href="#pricing" class="hover:text-brand-red transition">Pricing</a>
+        <a href="#rules" class="hover:text-brand-red transition">Gym Rules</a>
+        <a href="#location" class="hover:text-brand-red transition">Location</a>
+      </nav>
+
+      <!-- Header CTAs -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="tel:7043714660" class="flex items-center gap-2 text-xs font-semibold text-zinc-400 hover:text-white transition">
+          <i data-lucide="phone" class="w-4 h-4 text-brand-red"></i> 704.371.4660
+        </a>
+        <a href="#pricing" class="bg-brand-red hover:bg-brand-hover text-white text-sm font-bold uppercase tracking-wider px-5 py-2.5 rounded transition shadow-lg shadow-brand-red/20">
+          Join Today
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuBtn" class="md:hidden text-zinc-300 hover:text-white focus:outline-none">
+        <i data-lucide="menu" class="w-7 h-7"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-brand-card border-b border-brand-border px-4 py-6 space-y-4">
+      <a href="#about" class="block text-zinc-300 hover:text-brand-red font-medium">About Us</a>
+      <a href="#equipment" class="block text-zinc-300 hover:text-brand-red font-medium">Equipment</a>
+      <a href="#pricing" class="block text-zinc-300 hover:text-brand-red font-medium">Pricing</a>
+      <a href="#rules" class="block text-zinc-300 hover:text-brand-red font-medium">Gym Rules</a>
+      <a href="#location" class="block text-zinc-300 hover:text-brand-red font-medium">Location</a>
+      <div class="pt-4 border-t border-brand-border flex flex-col gap-3">
+        <a href="tel:7043714660" class="flex items-center gap-2 text-sm font-semibold text-zinc-300">
+          <i data-lucide="phone" class="w-4 h-4 text-brand-red"></i> Call 704.371.4660
+        </a>
+        <a href="#pricing" class="w-full text-center bg-brand-red hover:bg-brand-hover text-white font-bold uppercase py-3 rounded transition">
+          Join Today
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden grid-pattern border-b border-brand-border py-20">
+    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/80 to-transparent z-10"></div>
+    
+    <div class="relative z-20 max-w-5xl mx-auto px-4 text-center">
+      <div class="inline-flex items-center gap-2 bg-zinc-900/90 border border-brand-border px-4 py-1.5 rounded-full text-xs font-semibold text-zinc-300 uppercase tracking-widest mb-6">
+        <i data-lucide="shield-check" class="w-4 h-4 text-brand-red"></i> QUEEN CITY'S PREMIER 24/7 HEAVY IRON GYM
+      </div>
+
+      <h1 class="text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight text-white mb-6 leading-none">
+        NO EXCUSES. <br />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-red-500">JUST RESULTS.</span>
+      </h1>
+
+      <p class="text-base sm:text-xl text-zinc-400 max-w-2xl mx-auto mb-10 font-normal leading-relaxed">
+        Over <span class="text-white font-semibold">40,000 sq ft</span> of training space and <span class="text-white font-semibold">200+ hand-selected pieces</span> of classic vintage and modern elite equipment. Built for bodybuilders, powerlifters, and beginners alike.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#pricing" class="w-full sm:w-auto bg-brand-red hover:bg-brand-hover text-white font-black text-base uppercase tracking-wider px-8 py-4 rounded transition shadow-xl shadow-brand-red/25 flex items-center justify-center gap-2">
+          Claim Membership <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </a>
+        <a href="#passes" class="w-full sm:w-auto bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-brand-border font-bold text-base uppercase tracking-wider px-8 py-4 rounded transition flex items-center justify-center gap-2">
+          Get Day / Week Pass
+        </a>
+      </div>
+
+      <!-- Quick Metrics -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-12 border-t border-brand-border/60">
+        <div>
+          <p class="text-3xl sm:text-4xl font-black text-white">40,000+</p>
+          <p class="text-xs uppercase tracking-wider text-zinc-500 mt-1">Sq Ft Facility</p>
+        </div>
+        <div>
+          <p class="text-3xl sm:text-4xl font-black text-brand-red">200+</p>
+          <p class="text-xs uppercase tracking-wider text-zinc-500 mt-1">Unique Machines</p>
+        </div>
+        <div>
+          <p class="text-3xl sm:text-4xl font-black text-white">25+</p>
+          <p class="text-xs uppercase tracking-wider text-zinc-500 mt-1">Years of Legacy</p>
+        </div>
+        <div>
+          <p class="text-3xl sm:text-4xl font-black text-brand-red">24/7/365</p>
+          <p class="text-xs uppercase tracking-wider text-zinc-500 mt-1">Member Access</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Passes Section -->
+  <section id="passes" class="py-16 bg-zinc-950 border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-brand-red mb-2">TRY THE FACTORY</h2>
+        <h3 class="text-3xl font-black uppercase text-white">VISITOR & PASS OPTIONS</h3>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Day Pass -->
+        <div class="bg-brand-card border border-brand-border p-6 rounded-lg relative hover:border-brand-red transition">
+          <div class="flex justify-between items-start mb-4">
+            <h4 class="font-black text-xl text-white uppercase">Day Pass</h4>
+            <span class="text-2xl font-black text-brand-red">$20</span>
+          </div>
+          <p class="text-sm text-zinc-400 mb-6">Full single-day access to all 40,000 sq ft during staffed hours.</p>
+          <div class="bg-zinc-900 border border-zinc-800 p-3 rounded text-xs text-zinc-300 flex items-center gap-2">
+            <i data-lucide="info" class="w-4 h-4 text-brand-red shrink-0"></i>
+            <span><strong>Bonus:</strong> Credited toward your enrollment fee if you join within 7 days.</span>
+          </div>
+        </div>
+
+        <!-- Week Pass -->
+        <div class="bg-brand-card border-2 border-brand-red p-6 rounded-lg relative shadow-lg shadow-brand-red/10">
+          <span class="absolute -top-3 right-6 bg-brand-red text-white text-[10px] font-black uppercase px-2.5 py-0.5 rounded">MOST POPULAR PASS</span>
+          <div class="flex justify-between items-start mb-4">
+            <h4 class="font-black text-xl text-white uppercase">Week Pass</h4>
+            <span class="text-2xl font-black text-brand-red">$75</span>
+          </div>
+          <p class="text-sm text-zinc-400 mb-6">7 full days of access. Includes key fob for 24/7 entrance access.</p>
+          <div class="bg-zinc-900 border border-zinc-800 p-3 rounded text-xs text-zinc-300 flex items-center gap-2">
+            <i data-lucide="key" class="w-4 h-4 text-brand-red shrink-0"></i>
+            <span>Includes 24/7 fob access for the duration of the pass.</span>
+          </div>
+        </div>
+
+        <!-- Guest Pass -->
+        <div class="bg-brand-card border border-brand-border p-6 rounded-lg relative hover:border-brand-red transition">
+          <div class="flex justify-between items-start mb-4">
+            <h4 class="font-black text-xl text-white uppercase">Guest Pass</h4>
+            <span class="text-2xl font-black text-brand-red">$10</span>
+          </div>
+          <p class="text-sm text-zinc-400 mb-6">Bring a friend along for a session. Must be present with an active member.</p>
+          <div class="bg-zinc-900 border border-zinc-800 p-3 rounded text-xs text-zinc-300 flex items-center gap-2">
+            <i data-lucide="users" class="w-4 h-4 text-brand-red shrink-0"></i>
+            <span>Member must be active and present during visit.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Membership Pricing -->
+  <section id="pricing" class="py-20 bg-brand-dark border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-brand-red mb-2">MEMBERSHIP OPTIONS</h2>
+        <h3 class="text-3xl sm:text-4xl font-black uppercase text-white mb-6">CHOOSE YOUR COMMITMENT</h3>
+
+        <!-- Interactive Pricing Term Selector -->
+        <div class="inline-flex p-1 bg-zinc-900 border border-brand-border rounded-lg">
+          <button id="btn12Mo" onclick="setPricingTerm('12mo')" class="px-5 py-2.5 rounded text-xs font-bold uppercase transition bg-brand-red text-white">
+            12-Month Contract
+          </button>
+          <button id="btnMtm" onclick="setPricingTerm('mtm')" class="px-5 py-2.5 rounded text-xs font-bold uppercase transition text-zinc-400 hover:text-white">
+            Month-To-Month
+          </button>
+          <button id="btnPif" onclick="setPricingTerm('pif')" class="px-5 py-2.5 rounded text-xs font-bold uppercase transition text-zinc-400 hover:text-white flex items-center gap-1.5">
+            <span>Annual Paid In Full</span>
+            <span class="bg-emerald-500/20 text-emerald-400 text-[9px] px-1.5 py-0.5 rounded border border-emerald-500/30">BEST VALUE</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Pricing Cards Container -->
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Standard Access Card -->
+        <div class="bg-brand-card border border-brand-border rounded-xl p-8 hover:border-zinc-700 transition">
+          <div class="flex justify-between items-center mb-4">
+            <h4 class="font-black text-2xl uppercase text-white">STANDARD ACCESS</h4>
+            <span class="text-xs font-semibold px-2.5 py-1 bg-zinc-800 text-zinc-300 rounded uppercase">Standard Floor</span>
+          </div>
+          <p class="text-xs text-zinc-400 mb-6">Access to primary gym areas, main free weights, and cardio decks.</p>
+          
+          <div class="mb-6">
+            <div class="flex items-baseline gap-1">
+              <span id="stdPrice" class="text-5xl font-black text-white">$79</span>
+              <span id="stdUnit" class="text-sm font-bold text-zinc-400">/ mo</span>
+            </div>
+            <p id="stdEnrollment" class="text-xs text-brand-red font-semibold mt-2">$100 Enrollment Fee</p>
+          </div>
+
+          <ul class="space-y-3 border-t border-brand-border pt-6 text-sm text-zinc-300">
+            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-brand-red"></i> 24/7/365 Facility Access</li>
+            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-brand-red"></i> Standard Cardio & Free Weights Zone</li>
+            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-brand-red"></i> Lockers & Shower Access</li>
+            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-brand-red"></i> Self-Checkout Kiosk Access</li>
+          </ul>
+        </div>
+
+        <!-- Full Access Card -->
+        <div class="bg-brand-card border-2 border-brand-red rounded-xl p-8 relative shadow-xl shadow-brand-red/10">
+          <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-brand-red text-white text-xs font-black uppercase tracking-wider px-3 py-1 rounded">
+            RECOMMENDED FOR ATHLETES
+          </span>
+          <div class="flex justify-between items-center mb-4 mt-2">
+            <h4 class="font-black text-2xl uppercase text-white">FULL ACCESS</h4>
+            <span class="text-xs font-semibold px-2.5 py-1 bg-brand-red/20 text-brand-red border border-brand-red/30 rounded uppercase">All Areas</span>
+          </div>
+          <p class="text-xs text-zinc-400 mb-6">Complete access including specialty powerlifting, heavy iron & posing suite.</p>
+          
+          <div class="mb-6">
+            <div class="flex items-baseline gap-1">
+              <span id="fullPrice" class="text-5xl font-black text-white">$129</span>
+              <span id="fullUnit" class="text-sm font-bold text-zinc-400">/ mo</span>
+            </div>
+            <p id="fullEnrollment" class="text-xs text-brand-red font-semibold mt-2">$100 Enrollment Fee</p>
+          </div>
+
+          <ul class="space-y-3 border-t border-brand-border pt-6 text-sm text-zinc-300">
+            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-brand-red"></i> <strong>Everything in Standard +</strong></li>
+            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-brand-red"></i> Full Access Side & Specialty Vintage Iron</li>
+            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-brand-red"></i> Private Bodybuilding Posing Room</li>
+            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-brand-red"></i> Specialty Barbell & Power Platforms</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipment Showcase -->
+  <section id="equipment" class="py-20 bg-zinc-950 border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-widest text-brand-red mb-2">WORLD CLASS VAULT</h2>
+          <h3 class="text-3xl font-black uppercase text-white">200+ PIECES OF HARDWARE</h3>
+        </div>
+        <p class="text-sm text-zinc-400 max-w-md mt-4 md:mt-0">
+          We combine classic vintage iron with modern mechanical innovations to properly isolate every muscle angle.
+        </p>
+      </div>
+
+      <!-- Equipment Category Selector -->
+      <div class="flex flex-wrap gap-2 mb-8">
+        <button onclick="filterEquipment('all')" class="eq-btn active px-4 py-2 rounded text-xs font-bold uppercase bg-brand-red text-white">All Hardware</button>
+        <button onclick="filterEquipment('power')" class="eq-btn px-4 py-2 rounded text-xs font-bold uppercase bg-brand-card text-zinc-400 hover:text-white border border-brand-border">Powerlifting</button>
+        <button onclick="filterEquipment('bodybuilding')" class="eq-btn px-4 py-2 rounded text-xs font-bold uppercase bg-brand-card text-zinc-400 hover:text-white border border-brand-border">Bodybuilding</button>
+        <button onclick="filterEquipment('cardio')" class="eq-btn px-4 py-2 rounded text-xs font-bold uppercase bg-brand-card text-zinc-400 hover:text-white border border-brand-border">Cardio Deck</button>
+      </div>
+
+      <!-- Equipment Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="equipmentGrid">
+        <div class="eq-item bodybuilding bg-brand-card border border-brand-border p-6 rounded-lg">
+          <div class="w-10 h-10 bg-brand-red/10 border border-brand-red/30 rounded flex items-center justify-center text-brand-red mb-4">
+            <i data-lucide="dumbbell" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-black text-lg text-white mb-2">Vintage & Rare Machines</h4>
+          <p class="text-xs text-zinc-400">Rare, hard-to-find legacy pieces curated over 25+ years for unmatched muscle isolation.</p>
+        </div>
+
+        <div class="eq-item power bg-brand-card border border-brand-border p-6 rounded-lg">
+          <div class="w-10 h-10 bg-brand-red/10 border border-brand-red/30 rounded flex items-center justify-center text-brand-red mb-4">
+            <i data-lucide="layers" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-black text-lg text-white mb-2">Powerlifting Racks & Platforms</h4>
+          <p class="text-xs text-zinc-400">Competition power racks, calibrated plates, specialty bars (Safety Squat, Swiss, Trap).</p>
+        </div>
+
+        <div class="eq-item bodybuilding bg-brand-card border border-brand-border p-6 rounded-lg">
+          <div class="w-10 h-10 bg-brand-red/10 border border-brand-red/30 rounded flex items-center justify-center text-brand-red mb-4">
+            <i data-lucide="shield" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-black text-lg text-white mb-2">Dedicated Posing Room</h4>
+          <p class="text-xs text-zinc-400">Full Access area includes an isolated posing room with stage lighting for prep.</p>
+        </div>
+
+        <div class="eq-item cardio bg-brand-card border border-brand-border p-6 rounded-lg">
+          <div class="w-10 h-10 bg-brand-red/10 border border-brand-red/30 rounded flex items-center justify-center text-brand-red mb-4">
+            <i data-lucide="activity" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-black text-lg text-white mb-2">Cardio Suite</h4>
+          <p class="text-xs text-zinc-400">Stairmasters, commercial treadmills, rowing machines, and assault bikes.</p>
+        </div>
+
+        <div class="eq-item power bg-brand-card border border-brand-border p-6 rounded-lg">
+          <div class="w-10 h-10 bg-brand-red/10 border border-brand-red/30 rounded flex items-center justify-center text-brand-red mb-4">
+            <i data-lucide="trophy" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-black text-lg text-white mb-2">Olympic Lifting Zone</h4>
+          <p class="text-xs text-zinc-400">Bumper plates and wooden drop platforms designed for heavy Olympic pulls.</p>
+        </div>
+
+        <div class="eq-item bodybuilding bg-brand-card border border-brand-border p-6 rounded-lg">
+          <div class="w-10 h-10 bg-brand-red/10 border border-brand-red/30 rounded flex items-center justify-center text-brand-red mb-4">
+            <i data-lucide="zap" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-black text-lg text-white mb-2">No Waiting Guarantee</h4>
+          <p class="text-xs text-zinc-400">40,000 sq ft means multiple duplicate stations so you never stand around waiting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Owner Section -->
+  <section id="about" class="py-20 bg-brand-dark border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-brand-card border border-brand-border rounded-2xl p-8 md:p-12 relative overflow-hidden">
+        <div class="max-w-3xl">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-red">MEET THE FOUNDER</span>
+          <h3 class="text-3xl font-black uppercase text-white mt-2 mb-6">EILEEN FAGAN & THE FACTORY LEGACY</h3>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4">
+            Eileen has lived and breathed The Fitness Factory of Charlotte alongside her loyal Great Danes for over 25 years. What started in a small spot with floor cracks and roof leaks has grown into one of the largest and most successful female-owned gyms in North America.
+          </p>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-8">
+            "We built this space for people who care about real strength. Whether it's your first day stepping into a gym or you're preparing for a national stage, you have a home here."
+          </p>
+
+          <div class="flex items-center gap-6 border-t border-brand-border pt-6">
+            <div>
+              <p class="text-lg font-black text-white">Eileen Fagan</p>
+              <p class="text-xs text-zinc-500">Owner & Founder</p>
+            </div>
+            <div class="h-8 w-px bg-brand-border"></div>
+            <div>
+              <p class="text-lg font-black text-brand-red">Queen City Gym</p>
+              <p class="text-xs text-zinc-500">Established 1998</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Culture & Rules -->
+  <section id="rules" class="py-20 bg-zinc-950 border-b border-brand-border">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-brand-red mb-2">FACILITY STANDARDS</h2>
+        <h3 class="text-3xl font-black uppercase text-white">CULTURE & GYM RULES</h3>
+        <p class="text-xs text-zinc-400 mt-2">To protect our community and equipment, strict enforcement policies apply ($20 fine or membership termination for violations).</p>
+      </div>
+
+      <!-- Accordion Rules List -->
+      <div class="space-y-3">
+        <div class="bg-brand-card border border-brand-border rounded-lg p-4">
+          <h4 class="font-bold text-sm text-white flex items-center gap-3">
+            <span class="text-brand-red font-black">01.</span> Respect Members & Staff
+          </h4>
+          <p class="text-xs text-zinc-400 mt-2 pl-7">Zero tolerance policy for bullying or harassment of any kind.</p>
+        </div>
+
+        <div class="bg-brand-card border border-brand-border rounded-lg p-4">
+          <h4 class="font-bold text-sm text-white flex items-center gap-3">
+            <span class="text-brand-red font-black">02.</span> Door Security Policy (24/7 Safety)
+          </h4>
+          <p class="text-xs text-zinc-400 mt-2 pl-7">Never hold the door for anyone. Every member must scan their own key fob. Report piggybacking to 704-622-7201.</p>
+        </div>
+
+        <div class="bg-brand-card border border-brand-border rounded-lg p-4">
+          <h4 class="font-bold text-sm text-white flex items-center gap-3">
+            <span class="text-brand-red font-black">03.</span> Equipment Courtesy
+          </h4>
+          <p class="text-xs text-zinc-400 mt-2 pl-7">Always re-rack weights in their designated spots and wipe down equipment after use.</p>
+        </div>
+
+        <div class="bg-brand-card border border-brand-border rounded-lg p-4">
+          <h4 class="font-bold text-sm text-white flex items-center gap-3">
+            <span class="text-brand-red font-black">04.</span> Attire & Posing Protocol
+          </h4>
+          <p class="text-xs text-zinc-400 mt-2 pl-7">Shirts and shoes are required on the main floor. Shirt removal and bodybuilding trunks are allowed only inside the dedicated Posing Room on the Full Access side.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Footer -->
+  <footer id="location" class="bg-brand-dark pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-10 pb-12 border-b border-brand-border">
+        
+        <!-- Column 1: Info -->
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-brand-red text-white flex items-center justify-center font-black rounded">FF</div>
+            <span class="font-black text-lg text-white uppercase tracking-wider">FITNESS FACTORY</span>
+          </div>
+          <p class="text-xs text-zinc-400 mb-4 leading-relaxed">
+            3811 North Davidson St., Suite B<br />
+            Charlotte, NC 28205
+          </p>
+          <p class="text-xs text-zinc-400">Phone: <a href="tel:7043714660" class="text-white hover:text-brand-red">704.371.4660</a></p>
+          <p class="text-xs text-zinc-400">Email: <a href="mailto:yt.fitnessfactorycharlotte@gmail.com" class="text-white hover:text-brand-red">yt.fitnessfactorycharlotte@gmail.com</a></p>
+        </div>
+
+        <!-- Column 2: Hours -->
+        <div>
+          <h4 class="font-black text-sm text-white uppercase tracking-wider mb-4">FACILITY HOURS</h4>
+          <ul class="text-xs space-y-2 text-zinc-400">
+            <li class="flex justify-between border-b border-zinc-800 pb-1">
+              <span>Member Access:</span> <span class="text-white font-bold">24 Hours / 365 Days</span>
+            </li>
+            <li class="flex justify-between border-b border-zinc-800 pb-1">
+              <span>Staffed Mon – Fri:</span> <span class="text-white">9:00 AM – 9:00 PM</span>
+            </li>
+            <li class="flex justify-between border-b border-zinc-800 pb-1">
+              <span>Staffed Sat – Sun:</span> <span class="text-white">9:00 AM – 6:00 PM</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Quick CTA -->
+        <div>
+          <h4 class="font-black text-sm text-white uppercase tracking-wider mb-4">READY TO TRAIN?</h4>
+          <p class="text-xs text-zinc-400 mb-4">Stop by during staffed hours for a tour or sign up online to get immediate access.</p>
+          <a href="tel:7043714660" class="inline-block bg-brand-red hover:bg-brand-hover text-white text-xs font-black uppercase tracking-wider px-6 py-3 rounded transition">
+            Contact Staff
+          </a>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-zinc-500">
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> The Fitness Factory of Charlotte. All Rights Reserved.</p>
+        <p class="mt-2 sm:mt-0">Redesigned Modern Concept</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Dynamic Pricing Switcher Data
+    const pricingData = {
+      '12mo': {
+        stdPrice: '$79',
+        stdUnit: '/ mo',
+        stdEnrollment: '$100 Enrollment Fee',
+        fullPrice: '$129',
+        fullUnit: '/ mo',
+        fullEnrollment: '$100 Enrollment Fee'
+      },
+      'mtm': {
+        stdPrice: '$99',
+        stdUnit: '/ mo',
+        stdEnrollment: '$50 Enrollment Fee',
+        fullPrice: '$149',
+        fullUnit: '/ mo',
+        fullEnrollment: '$50 Enrollment Fee'
+      },
+      'pif': {
+        stdPrice: '$849',
+        stdUnit: '/ yr',
+        stdEnrollment: '$0 Enrollment Fee (No Refunds)',
+        fullPrice: '$1,399',
+        fullUnit: '/ yr',
+        fullEnrollment: '$0 Enrollment Fee (No Refunds)'
+      }
+    };
+
+    function setPricingTerm(term) {
+      // Button states
+      ['btn12Mo', 'btnMtm', 'btnPif'].forEach(id => {
+        const btn = document.getElementById(id);
+        btn.className = "px-5 py-2.5 rounded text-xs font-bold uppercase transition text-zinc-400 hover:text-white";
+      });
+
+      if (term === '12mo') document.getElementById('btn12Mo').className = "px-5 py-2.5 rounded text-xs font-bold uppercase transition bg-brand-red text-white";
+      if (term === 'mtm') document.getElementById('btnMtm').className = "px-5 py-2.5 rounded text-xs font-bold uppercase transition bg-brand-red text-white";
+      if (term === 'pif') document.getElementById('btnPif').className = "px-5 py-2.5 rounded text-xs font-bold uppercase transition bg-brand-red text-white";
+
+      // Update values
+      const data = pricingData[term];
+      document.getElementById('stdPrice').innerText = data.stdPrice;
+      document.getElementById('stdUnit').innerText = data.stdUnit;
+      document.getElementById('stdEnrollment').innerText = data.stdEnrollment;
+
+      document.getElementById('fullPrice').innerText = data.fullPrice;
+      document.getElementById('fullUnit').innerText = data.fullUnit;
+      document.getElementById('fullEnrollment').innerText = data.fullEnrollment;
+    }
+
+    // Equipment Filter
+    function filterEquipment(cat) {
+      const items = document.querySelectorAll('.eq-item');
+      const buttons = document.querySelectorAll('.eq-btn');
+
+      buttons.forEach(btn => {
+        btn.className = "eq-btn px-4 py-2 rounded text-xs font-bold uppercase bg-brand-card text-zinc-400 hover:text-white border border-brand-border";
+      });
+      event.target.className = "eq-btn active px-4 py-2 rounded text-xs font-bold uppercase bg-brand-red text-white";
+
+      items.forEach(item => {
+        if (cat === 'all' || item.classList.contains(cat)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
